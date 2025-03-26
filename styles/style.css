@@ -1,32 +1,107 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  font-family: var(--main-font-family), sans-serif;
-  font-size: var(--main-font-size);
   background-color: var(--bg-color);
-}
-
-.title {
-  font-weight: 700;
-}
-
-.subtitle {
-  font-weight: 700;
-  font-size: 18px;
 }
 
 /* Header styles */
 
 .header {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: min-content min-content min-content;
+  align-items: start;
   padding-inline: var(--pad-inline);
-  padding-block: var(--pad-block-start);
-  background: var(--bg-image) center center / cover  no-repeat;
+  padding-block-start: var(--pad-block-start);
+  background: var(--bg-image) center center / cover no-repeat;
   min-inline-size: 375px;
-  ;
   block-size: 100vh;
+}
+
+.header::before{
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+}
+
+.header::after{
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+}
+
+.header__rec {
+  position: absolute;
+  top: 10px;
+  right: 19px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent-color);
+  font-family: var(--main-font-family), sans-serif;
+  font-weight: 400;
+  font-size: var(--main-font-size);
+  font-style: normal;
+  line-height: 25px; /* 138.889% */
+}
+
+.header__rec::after {
+  content: '';
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px #FF0070;
+  background-color: #FF0070;
+}
+
+.header__theme-menu {
+  justify-self: end;
+  margin-block-start: 66px;
+  margin-block-end: 65px;
+}
+
+.header__theme-menu-item:not(:last-child){
+  margin-block-end: 13px;
+}
+
+.header__theme-menu-button {
+  border: 1px solid rgba(255, 0, 112, 0);
+  padding-inline: 13px;
+  color: var(--nav-color);
+  font-family: var(--main-font-family), sans-serif;
+  font-weight: 400;
+  font-size: var(--main-font-family);
+  font-style: normal;
+  line-height: 18px; /* 100% */
+  text-align: center;
+  background: none;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid ;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--nav-hover-border-color);
+}
+
+.header__theme-menu-button:focus {
+  border-bottom: 1px solid var(--accent-color);
+  outline: none;
 }
 
 .header__logo {
@@ -41,12 +116,42 @@
 }
 
 .header__title {
-  color: #000028;
-  font-family: inherit;
+  justify-self: end;
+  color: var(--title-color);
+  font-family: var(--main-font-family), sans-serif;
   font-weight: 700;
+  font-size: var(--main-font-size);
   font-style: normal;
-  line-height: 23.4px; /* 130% */
+  line-height: var(--main-line-height); /* 130% */
   background-color: var(--accent-color);
+  max-inline-size: 365px;
+}
+
+@media (width >= 768px) {
+  .header__theme-menu {
+    justify-self: end;
+    margin-block-start: 173px;
+    margin-block-end: 174px;
+  }
+
+  .header__logo {
+      margin-block-end: 162px;
+  }
+
+  .header__rec {
+    top: 20px;
+    right: 30px;
+  }
+
+  .header::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .header::after {
+    bottom: 20px;
+    left: 20px;
+  }
 }
 
 

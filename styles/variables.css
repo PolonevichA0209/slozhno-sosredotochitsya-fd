@@ -23,4 +23,12 @@
   --pad-inline: 10px;
   --pad-block-start: 10px;
   --title-font-size: 18px;
+  --title-color: rgba(0, 0, 40, 1);
+}
+
+@media (width >= 768px) {
+  :root {
+      --pad-inline: 20px;
+      --pad-block-start: 20px;
+  }
 }
