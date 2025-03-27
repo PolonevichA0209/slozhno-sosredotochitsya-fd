@@ -1,7 +1,9 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  background: var(--bg-image) center center / cover no-repeat;
   background-color: var(--bg-color);
+  background-attachment: fixed;
 }
 
 /* Header styles */
@@ -10,13 +12,12 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: min-content min-content min-content;
-  align-items: start;
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+  height: 100vh;
   padding-inline: var(--pad-inline);
   padding-block-start: var(--pad-block-start);
-  background: var(--bg-image) center center / cover no-repeat;
   min-inline-size: 375px;
-  block-size: 100vh;
 }
 
 .header::before{
@@ -70,8 +71,6 @@
 
 .header__theme-menu {
   justify-self: end;
-  margin-block-start: 66px;
-  margin-block-end: 65px;
 }
 
 .header__theme-menu-item:not(:last-child){
@@ -105,7 +104,6 @@
 }
 
 .header__logo {
-  margin-block-end: 55px;
   color: var(--header-logo-color);
   font-family: var(--main-font-family), sans-serif;
   font-weight: 700;
@@ -130,12 +128,12 @@
 @media (width >= 768px) {
   .header__theme-menu {
     justify-self: end;
-    margin-block-start: 173px;
-    margin-block-end: 174px;
+
   }
 
   .header__logo {
-      margin-block-end: 162px;
+    margin-inline-start: -10px;
+
   }
 
   .header__rec {
@@ -154,4 +152,27 @@
   }
 }
 
+@media (width >= 1024px) {
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    gap: 23px;
+  }
+
+  .header__theme-menu-item:not(:last-child){
+  margin-block-end: 0px;
+  }
+
+  .header__title {
+    max-inline-size: 491px;
+  }
+
+  .header__logo {
+    margin-inline-start: -10px;
+  }
+}
 
