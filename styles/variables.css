@@ -21,7 +21,7 @@
   --mobile-logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --desktop-logo-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
   --pad-inline: 10px;
-  --pad-block-start: 10px;
+  --pad-block: 10px;
   --title-font-size: 18px;
   --title-color: rgba(0, 0, 40, 1);
 }
@@ -29,6 +29,6 @@
 @media (width >= 768px) {
   :root {
       --pad-inline: 20px;
-      --pad-block-start: 20px;
+      --pad-block: 20px;
   }
 }
