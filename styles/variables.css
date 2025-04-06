@@ -13,7 +13,7 @@
   --accent-color: rgba(255, 0, 112, 1);
   --section-heading-color: rgba(255, 0, 112, 1);
   --section-subheading-color: rgba(0, 0, 40, 1);
-  --main-font-family: "IBM Plex Mono", monospace;
+  --main-font-family: "IBM Plex Mono";
   --nav-color: rgba(255, 0, 112, 1);
   --nav-hover-border-color: rgba(255, 0, 112, 0.40);
   --main-font-size: 18px;
@@ -25,6 +25,7 @@
   --title-font-size: 18px;
   --title-color: rgba(0, 0, 40, 1);
   --arrow-color: rgba(255, 0, 112, 1);
+  --decaration-offset: 10px;
   --link-focus-color: rgba(255, 0, 112, 1);
   --text-link-clor: #F1B2CE;
 }
@@ -33,5 +34,6 @@
   :root {
       --pad-inline: 20px;
       --pad-block: 20px;
+      --decaration-offset: 20px;
   }
 }
