@@ -30,7 +30,7 @@
   height: 25px;
 }
 
-.header::before, .footer::before{
+.header::before, .footer::before {
   top: var(--decaration-offset);
   right: var(--decaration-offset);
   border-top: 1px solid var(--arrow-color);
@@ -340,7 +340,7 @@
   }
 }
 
-@media (width >= 1024px){
+@media (width >= 1024px) {
   /* Header */
   .header__theme-menu {
     justify-self: center;
