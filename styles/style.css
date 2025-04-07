@@ -19,10 +19,8 @@
   outline: none;
 }
 
-.header::before, 
-.footer::before, 
-.header::after, 
-.footer::after {
+.decorated-zone::before,  
+.decorated-zone::after {
   content: '';
   position: absolute;
   display: block;
@@ -30,14 +28,14 @@
   height: 25px;
 }
 
-.header::before, .footer::before {
+.decorated-zone::before {
   top: var(--decaration-offset);
   right: var(--decaration-offset);
   border-top: 1px solid var(--arrow-color);
   border-right: 1px solid var(--arrow-color);
 }
 
-.header::after, .footer::after {
+.decorated-zone::after {
   bottom: var(--decaration-offset);
   left: var(--decaration-offset);
   border-bottom: 1px solid var(--arrow-color);
@@ -49,13 +47,14 @@
 .header {
   position: relative;
   display: grid;
+  grid-template-rows: 1fr min-content 1fr;
   align-items: start;
   align-content: start;
   height: 100vh;
   min-height: 668px;
   margin-block-end: 40px;
   padding-inline: var(--pad-inline);
-  padding-block-start: var(--pad-block);
+  padding-block: var(--pad-block);
 }
 
 .header__rec {
@@ -73,12 +72,6 @@
   line-height: 25px; /* 138.889% */
 }
 
-.header__theme-menu {
-    justify-self: end;
-    margin-block-start: 65px;
-    margin-block-end: 66px;
-}
-
 .header__rec::after {
   content: '';
   display: block;
@@ -87,6 +80,11 @@
   border-radius: 50%;
   box-shadow: 0px 0px 4px 2px #FF0070;
   background-color: #FF0070;
+}
+
+.header__theme-menu {
+    justify-self: end;
+    align-self: center;
 }
 
 .header__theme-menu-item:not(:last-child) {
@@ -122,7 +120,6 @@
 }
 
 .header__logo {
-  margin-block-end: 56px;
   color: var(--header-logo-color);
   font-family: var(--main-font-family), monospace, sans-serif;
   font-weight: 700;
@@ -134,6 +131,7 @@
 
 .header__title {
   justify-self: end;
+  align-self: center;
   color: var(--title-color);
   font-family: var(--main-font-family), monospace, sans-serif;
   font-weight: 700;
@@ -253,19 +251,19 @@
     margin-block-end: 60px;
   }
 
-    .header__rec {
+  .header__rec {
     right: 30px;
   }
 
   .header__theme-menu {
     justify-self: end;
-    margin-block-start: 172px;
-    margin-block-end: 174px;
+    /* margin-block-start: 172px;
+    margin-block-end: 174px; */
   }
 
   .header__logo {
     margin-inline-start: -20px;
-    margin-block-end: 162px;
+    /* margin-block-end: 162px; */
     font-size: var(--desktop-logo-size);
   }
 
@@ -345,8 +343,8 @@
   .header__theme-menu {
     justify-self: center;
     align-self: start;
-    margin-block-start: 0px;
-    margin-block-end: 275px;
+    /* margin-block-start: 0px;
+    margin-block-end: 275px; */
   }
 
   .header__theme-menu-list {
@@ -359,7 +357,7 @@
   }
 
   .header__logo {
-    margin-block-end: 113px;
+    /* margin-block-end: 113px; */
   }
 
   .header__title {
